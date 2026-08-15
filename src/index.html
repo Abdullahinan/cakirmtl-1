@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Çakır Metal | Kaynak & Metal İmalat</title>
+
+  <meta name="description"
+        content="Çakır Metal - Köseköy Sanayi Sitesi. Kaynak, metal imalat, çelik konstrüksiyon ve özel imalat hizmetleri. 7/24 hizmet.">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a href="#anasayfa" class="logo">
+        <span class="logo-icon">ÇM</span>
+        <span>
+          <strong>ÇAKIR METAL</strong>
+          <small>KAYNAK & İMALAT</small>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#anasayfa">Ana Sayfa</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+
+      <a class="nav-call" href="tel:+905528872006">
+        ☎ Hemen Ara
+      </a>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#anasayfa" onclick="closeMenu()">Ana Sayfa</a>
+      <a href="#hizmetler" onclick="closeMenu()">Hizmetler</a>
+      <a href="#hakkimizda" onclick="closeMenu()">Hakkımızda</a>
+      <a href="#iletisim" onclick="closeMenu()">İletişim</a>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="anasayfa">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+      <div class="status">
+        <span></span> 7/24 HİZMET VERİYORUZ
+      </div>
+
+      <h1>
+        Güçlü İşçilik.<br>
+        <span>Sağlam İmalat.</span>
+      </h1>
+
+      <p>
+        Kaynak ve metal imalat alanında kaliteli,
+        sağlam ve profesyonel çözümler.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="tel:+905528872006" class="btn btn-primary">
+          📞 Hemen Ara
+        </a>
+
+        <a href="https://wa.me/905528872006" class="btn btn-whatsapp" target="_blank">
+          WhatsApp'tan Yaz
+        </a>
+
+      </div>
+
+      <div class="hero-info">
+        <div>
+          <strong>7/24</strong>
+          <span>Hizmet</span>
+        </div>
+
+        <div>
+          <strong>⚙</strong>
+          <span>Metal İmalat</span>
+        </div>
+
+        <div>
+          <strong>✓</strong>
+          <span>Profesyonel İşçilik</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services section" id="hizmetler">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>HİZMETLERİMİZ</span>
+        <h2>Metal ve Kaynak İşlerinde<br>Profesyonel Çözümler</h2>
+        <p>
+          İhtiyacınıza uygun metal imalat ve kaynak çalışmalarını
+          titizlikle gerçekleştiriyoruz.
+        </p>
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="service-icon">⚒</div>
+          <h3>Kaynak İmalat</h3>
+          <p>
+            Her türlü kaynak ve kaynaklı imalat işleriniz
+            profesyonel şekilde yapılır.
+          </p>
+          <span>01</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">▦</div>
+          <h3>Metal İmalat</h3>
+          <p>
+            İhtiyaca özel ölçü ve tasarımlarda metal
+            imalat çalışmaları gerçekleştiriyoruz.
+          </p>
+          <span>02</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚙</div>
+          <h3>Özel İmalat</h3>
+          <p>
+            Projenize ve ölçülerinize özel metal
+            konstrüksiyon ve imalat çözümleri.
+          </p>
+          <span>03</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⬡</div>
+          <h3>Çelik Konstrüksiyon</h3>
+          <p>
+            Sağlam ve dayanıklı çelik konstrüksiyon
+            uygulamaları.
+          </p>
+          <span>04</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">▤</div>
+          <h3>Montaj İşleri</h3>
+          <p>
+            Üretimi yapılan metal ürünlerin profesyonel
+            montaj işlemleri.
+          </p>
+          <span>05</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">+</div>
+          <h3>Daha Fazlası</h3>
+          <p>
+            Metal ve kaynak alanında ihtiyacınız olan
+            geniş kapsamlı imalat işleri.
+          </p>
+          <span>06</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about section" id="hakkimizda">
+
+    <div class="container about-grid">
+
+      <div class="about-visual">
+
+        <div class="metal-box">
+          <div class="metal-symbol">ÇM</div>
+          <div class="metal-lines"></div>
+        </div>
+
+        <div class="experience">
+          <strong>7/24</strong>
+          <span>Çalışma</span>
+        </div>
+
+      </div>
+
+      <div class="about-content">
+
+        <span class="eyebrow">ÇAKIR METAL</span>
+
+        <h2>
+          Metalde Güç,<br>
+          İşçilikte Güven.
+        </h2>
+
+        <p>
+          Çakır Metal olarak kaynak ve metal imalat alanında
+          müşterilerimizin ihtiyaçlarına yönelik çözümler
+          üretiyoruz.
+        </p>
+
+        <p>
+          Küçük ölçekli işlerden geniş çaplı imalatlara kadar
+          farklı ihtiyaçlara profesyonel yaklaşım sunuyoruz.
+        </p>
+
+        <div class="check-list">
+          <div>✓ Kaliteli işçilik</div>
+          <div>✓ Sağlam ve dayanıklı imalat</div>
+          <div>✓ İhtiyaca özel çözümler</div>
+          <div>✓ 7/24 ulaşılabilirlik</div>
+        </div>
+
+        <a href="#iletisim" class="btn btn-dark">
+          Teklif Al →
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <div class="container cta-inner">
+
+      <div>
+        <span>PROJENİZ Mİ VAR?</span>
+        <h2>İşinizi birlikte hayata geçirelim.</h2>
+        <p>
+          Yapılacak iş hakkında bilgi almak veya fiyat teklifi
+          almak için hemen bizimle iletişime geçin.
+        </p>
+      </div>
+
+      <a href="https://wa.me/905528872006" target="_blank" class="btn btn-whatsapp large">
+        WhatsApp'tan Ulaş
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact section" id="iletisim">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>İLETİŞİM</span>
+        <h2>Çakır Metal'e Ulaşın</h2>
+        <p>
+          Sorularınız ve işleriniz için bize 7/24 ulaşabilirsiniz.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <a href="tel:+905528872006" class="contact-card">
+          <div class="contact-icon">☎</div>
+          <div>
+            <small>TELEFON</small>
+            <strong>0552 887 20 06</strong>
+          </div>
+        </a>
+
+        <a href="tel:+905553158918" class="contact-card">
+          <div class="contact-icon">☎</div>
+          <div>
+            <small>TELEFON 2</small>
+            <strong>0555 315 89 18</strong>
+          </div>
+        </a>
+
+        <a href="mailto:xkereemckr@gmail.com" class="contact-card">
+          <div class="contact-icon">✉</div>
+          <div>
+            <small>E-POSTA</small>
+            <strong>xkereemckr@gmail.com</strong>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/caki.rmetal/" target="_blank" class="contact-card">
+          <div class="contact-icon">◎</div>
+          <div>
+            <small>INSTAGRAM</small>
+            <strong>@caki.rmetal</strong>
+          </div>
+        </a>
+
+      </div>
+
+
+      <div class="address-card">
+
+        <div class="address-icon">⌖</div>
+
+        <div>
+          <small>ADRES</small>
+          <strong>Köseköy Sanayi Sitesi</strong>
+          <p>Çakır Metal — Kaynak & Metal İmalat</p>
+        </div>
+
+        <div class="open-status">
+          <span></span>
+          7/24 AÇIK
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div class="footer-logo">
+        <span class="logo-icon">ÇM</span>
+        <div>
+          <strong>ÇAKIR METAL</strong>
+          <small>KAYNAK & İMALAT</small>
+        </div>
+      </div>
+
+      <p>
+        © <span id="year"></span> Çakır Metal. Tüm hakları saklıdır.
+      </p>
+
+      <a href="#anasayfa">Yukarı ↑</a>
+
+    </div>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/905528872006"
+     class="floating-whatsapp"
+     target="_blank"
+     aria-label="WhatsApp">
+    <span>◉</span>
+  </a>
+
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
