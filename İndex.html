@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Çakır Metal - Köseköy Sanayi Sitesi kaynak ve metal imalat hizmetleri. 7/24 hizmet.">
+<title>Çakır Metal | Kaynak & Metal İmalat</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#080b10;
+  color:#fff;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(8,11,16,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #252b34;
+}
+
+.nav-inner{
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:bold;
+}
+
+.logo-icon{
+  width:45px;
+  height:45px;
+  border-radius:10px;
+  background:#f5b400;
+  color:#080b10;
+  display:grid;
+  place-items:center;
+  font-size:18px;
+  font-weight:900;
+}
+
+.logo small{
+  display:block;
+  color:#9da5b1;
+  font-size:11px;
+  letter-spacing:1px;
+}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+}
+
+.nav-links a{
+  color:#d8dde5;
+  font-size:15px;
+  transition:.2s;
+}
+
+.nav-links a:hover{
+  color:#f5b400;
+}
+
+.menu{
+  display:none;
+  background:none;
+  border:1px solid #3a414c;
+  color:white;
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:20px;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding-top:100px;
+  background:
+    radial-gradient(circle at 80% 25%,rgba(245,180,0,.14),transparent 30%),
+    radial-gradient(circle at 15% 70%,rgba(255,255,255,.05),transparent 25%),
+    #080b10;
+}
+
+.hero-content{
+  max-width:750px;
+}
+
+.badge{
+  display:inline-block;
+  border:1px solid #4a3b0b;
+  background:#17140a;
+  color:#f5b400;
+  padding:8px 14px;
+  border-radius:30px;
+  margin-bottom:20px;
+  font-size:14px;
+}
+
+.hero h1{
+  font-size:clamp(42px,7vw,78px);
+  line-height:1.05;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:#f5b400;
+}
+
+.hero p{
+  color:#aeb6c2;
+  font-size:19px;
+  max-width:650px;
+  margin-bottom:32px;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.btn{
+  padding:14px 22px;
+  border-radius:9px;
+  font-weight:bold;
+  display:inline-block;
+  transition:.2s;
+}
+
+.btn-primary{
+  background:#f5b400;
+  color:#080b10;
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+  background:#ffc72c;
+}
+
+.btn-outline{
+  border:1px solid #414854;
+  color:#fff;
+}
+
+.btn-outline:hover{
+  border-color:#f5b400;
+  color:#f5b400;
+}
+
+/* SECTIONS */
+section{
+  padding:90px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title span{
+  color:#f5b400;
+  font-size:14px;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.section-title h2{
+  font-size:38px;
+  margin-top:8px;
+}
+
+.section-title p{
+  color:#9da5b1;
+  max-width:650px;
+  margin:10px auto 0;
+}
+
+/* SERVICES */
+.services{
+  background:#0d1117;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:#121820;
+  border:1px solid #252d38;
+  border-radius:16px;
+  padding:28px;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#f5b400;
+}
+
+.card-icon{
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:#2a2108;
+  color:#f5b400;
+  font-size:24px;
+  margin-bottom:18px;
+}
+
+.card h3{
+  margin-bottom:10px;
+  font-size:21px;
+}
+
+.card p{
+  color:#929ba8;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about h2{
+  font-size:40px;
+  margin-bottom:18px;
+}
+
+.about p{
+  color:#a5aeba;
+  margin-bottom:18px;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.feature{
+  background:#121820;
+  border:1px solid #252d38;
+  padding:15px;
+  border-radius:10px;
+  color:#dce1e8;
+}
+
+.feature b{
+  color:#f5b400;
+}
+
+/* CONTACT */
+.contact{
+  background:#0d1117;
+}
+
+.contact-box{
+  background:linear-gradient(135deg,#151b23,#0f141b);
+  border:1px solid #2b333e;
+  border-radius:20px;
+  padding:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+}
+
+.contact-info h3{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.contact-info p{
+  color:#9fa8b4;
+  margin-bottom:20px;
+}
+
+.contact-item{
+  padding:14px 0;
+  border-bottom:1px solid #252d38;
+}
+
+.contact-item strong{
+  display:block;
+  color:#f5b400;
+  margin-bottom:3px;
+}
+
+.contact-item a{
+  color:#dce1e8;
+}
+
+.contact-item a:hover{
+  color:#f5b400;
+}
+
+.contact-buttons{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:14px;
+}
+
+/* FOOTER */
+footer{
+  padding:30px 0;
+  text-align:center;
+  background:#06080c;
+  color:#77808d;
+  font-size:14px;
+}
+
+footer strong{
+  color:#f5b400;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:#0b0f14;
+    padding:20px;
+    flex-direction:column;
+    border-bottom:1px solid #252b34;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-box{
+    grid-template-columns:1fr;
+    padding:25px;
+  }
+
+  .hero{
+    min-height:90vh;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:70px 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+
+    <a href="#anasayfa" class="logo">
+      <div class="logo-icon">ÇM</div>
+      <div>
+        ÇAKIR METAL
+        <small>KAYNAK & İMALAT</small>
+      </div>
+    </a>
+
+    <button class="menu" onclick="toggleMenu()">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#anasayfa">Ana Sayfa</a>
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="hero" id="anasayfa">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="badge">⚡ 7/24 HİZMET VERİYORUZ</div>
+
+      <h1>
+        Güçlü İşçilik.<br>
+        <span>Sağlam İmalat.</span>
+      </h1>
+
+      <p>
+        Kaynak ve metal imalat alanında kaliteli, sağlam ve
+        profesyonel çözümler sunuyoruz. İhtiyacınıza özel
+        imalat ve kaynak işleri için Çakır Metal yanınızda.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="tel:05528872006">
+          📞 Hemen Ara
+        </a>
+
+        <a class="btn btn-outline" href="#hizmetler">
+          Hizmetlerimizi Gör
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="services" id="hizmetler">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>HİZMETLERİMİZ</span>
+      <h2>Metal ve Kaynak Çözümleri</h2>
+      <p>
+        Geniş çaplı kaynak ve metal imalat işleriniz için
+        profesyonel çözümler.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-icon">⚒</div>
+        <h3>Kaynak İmalatı</h3>
+        <p>
+          Çeşitli metal parçaların kaynak, birleştirme ve
+          imalat işlemleri profesyonel şekilde yapılır.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">⚙</div>
+        <h3>Metal İmalat</h3>
+        <p>
+          İhtiyaca özel metal konstrüksiyon ve imalat
+          çalışmaları gerçekleştirilir.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔩</div>
+        <h3>Özel İmalat</h3>
+        <p>
+          Ölçünüze ve projenize uygun özel metal ürünler
+          hazırlanır.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🏗</div>
+        <h3>Çelik Konstrüksiyon</h3>
+        <p>
+          Dayanıklı ve güvenilir çelik konstrüksiyon
+          uygulamaları yapılır.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🛠</div>
+        <h3>Bakım & Onarım</h3>
+        <p>
+          Metal ekipman ve konstrüksiyonların bakım,
+          onarım ve kaynak işlemleri yapılır.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📐</div>
+        <h3>Proje Bazlı İmalat</h3>
+        <p>
+          Farklı ölçü ve ihtiyaçlara göre proje bazlı
+          metal imalat hizmeti sunuyoruz.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="about" id="hakkimizda">
+
+  <div class="container about-grid">
+
+    <div>
+      <div class="section-title" style="text-align:left;margin-bottom:25px;">
+        <span>ÇAKIR METAL</span>
+        <h2>İşinizi Sağlam Yapıyoruz.</h2>
+      </div>
+
+      <p>
+        Çakır Metal olarak kaynak ve metal imalat alanında
+        kaliteli işçilik ve sağlam üretim anlayışıyla hizmet
+        veriyoruz.
+      </p>
+
+      <p>
+        Küçük işlerden geniş çaplı imalatlara kadar birçok
+        kaynak ve metal işini gerçekleştiriyoruz.
+      </p>
+
+      <div class="features">
+        <div class="feature">✓ <b>7/24</b> Hizmet</div>
+        <div class="feature">✓ Sağlam İşçilik</div>
+        <div class="feature">✓ Özel İmalat</div>
+        <div class="feature">✓ Hızlı Çözüm</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📍</div>
+      <h3>Köseköy Sanayi Sitesi</h3>
+      <p>
+        Profesyonel kaynak ve metal imalat hizmetlerimiz
+        için bizimle iletişime geçebilirsiniz.
+      </p>
+
+      <br>
+
+      <a class="btn btn-primary" href="#iletisim">
+        İletişime Geç
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="iletisim">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>İLETİŞİM</span>
+      <h2>Bizimle İletişime Geçin</h2>
+      <p>
+        İşiniz için bilgi almak veya fiyat teklifi istemek
+        için hemen arayın.
+      </p>
+    </div>
+
+    <div class="contact-box">
+
+      <div class="contact-info">
+
+        <h3>Çakır Metal</h3>
+
+        <p>
+          Kaynak & Metal İmalat
+        </p>
+
+        <div class="contact-item">
+          <strong>📞 Telefon</strong>
+          <a href="tel:05528872006">
+            0552 887 20 06
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>📞 Telefon</strong>
+          <a href="tel:+905553158918">
+            +90 555 315 89 18
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>✉️ E-posta</strong>
+          <a href="mailto:xkereemckr@gmail.com">
+            xkereemckr@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>📍 Adres</strong>
+          Köseköy Sanayi Sitesi
+        </div>
+
+        <div class="contact-item">
+          <strong>🕐 Çalışma Saatleri</strong>
+          7/24 Açık
+        </div>
+
+      </div>
+
+
+      <div class="contact-buttons">
+
+        <a class="btn btn-primary" href="tel:05528872006">
+          📞 0552 887 20 06 — Hemen Ara
+        </a>
+
+        <a class="btn btn-outline" href="tel:+905553158918">
+          📞 +90 555 315 89 18 — Ara
+        </a>
+
+        <a class="btn btn-outline" href="mailto:xkereemckr@gmail.com">
+          ✉️ E-posta Gönder
+        </a>
+
+        <a class="btn btn-outline"
+           href="https://instagram.com/caki.rmetal"
+           target="_blank">
+          📷 Instagram: @caki.rmetal
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+  © 2026 <strong>Çakır Metal</strong> — Kaynak & Metal İmalat
+</footer>
+
+
+<script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+  link.addEventListener("click",function(){
+    document.getElementById("navLinks").classList.remove("active");
+  });
+});
+</script>
+
+</body>
+</html>
